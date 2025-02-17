@@ -164,6 +164,7 @@ vim.opt.scrolloff = 10
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>', { silent = true }) -- Save
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true }) -- Quit
+vim.keymap.set('n', '<leader>pv', ':Ex<CR>', { silent = true }) -- Quit
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>x', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -791,7 +792,7 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<CR>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
